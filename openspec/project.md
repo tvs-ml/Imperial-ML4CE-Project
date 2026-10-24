@@ -12,6 +12,7 @@ Each coursework task is its own change under `changes/<task>/`:
 Rules
 - Keep it lean: a table of measurements beats three paragraphs of prose.
 - Every approach that was tried goes into `design.md` with its result (score, runtime, seeds), even if it was rejected. That keeps the path to the solution traceable and usable for the 2-page report.
+- One change per task, not per approach: the spec (metric, evaluation script, budget, baselines) is the same for all approaches. Each approach gets a short section in `design.md` (idea, difference to its predecessor, file under `approaches/`), a row in the results table or under "Rejected approaches", and its own block in `tasks.md`. A new change is only opened when the rules themselves change (new metric, new task).
 - Every approach lives as its own file side by side on the main branch (e.g. `BatchBayesianOptimization/approaches/<name>.py`), not as a separate git branch, so `score.py` can compare them in one run and rejected approaches stay visible. A branch is only a workspace for one approach; once measured it is merged, rejected or not. The submission file is a copy of the winner.
 - Once a task is submitted, the final spec moves to `specs/<area>/spec.md` (archived).
 - All documents and code comments are written in English.
